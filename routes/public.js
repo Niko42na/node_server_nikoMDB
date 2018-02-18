@@ -29,7 +29,6 @@ function public(req, res) {
     const stream = fs.createReadStream(path.resolve('public', filename));
 
     stream.pipe(res);
-
     stream.on('error', error => {
         if (error.code === 'ENOENT') {
             res.writeHead(404, { 'Content-Type': 'text/plain' });

@@ -13,4 +13,4 @@ http.createServer((req, res) => {
     } else {
         notFound(req, res);
     }
-}).listen(3000, () => console.log('Server started'));
+}).listen(3000, () => console.log('Server started at localhost:3000'));
